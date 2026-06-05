@@ -1,3 +1,5 @@
+### `README.md`
+
 ```markdown
 # Build a Pokedex in TypeScript 🎮✨
 
@@ -5,7 +7,7 @@ An interactive, command-line Pokedex application built from scratch using TypeSc
 
 This project is a completed portfolio assignment from the official [Boot.dev Guided Course Architecture](https://www.boot.dev/courses/build-pokedex-cli-typescript).
 
-* **Course Authors:** Boot.dev Team 🧙🐻👩‍💻
+* **Course Authors:** Boot.Dev Team 🧙🐻👩‍💻
 * **Implemented By:** Jenn Roselynn 🦇✨🌙
 
 ---
