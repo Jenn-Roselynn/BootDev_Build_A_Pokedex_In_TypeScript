@@ -1,6 +1,3 @@
-### `README.md`
-
-```markdown
 # Build a Pokedex in TypeScript 🎮✨
 
 An interactive, command-line Pokedex application built from scratch using TypeScript and Node.js. This project implements a fully functional Read-Eval-Print Loop (REPL), parses structured JSON payloads from the remote PokeAPI service, and features an optimized, generic in-memory cache system with automatic background eviction.
@@ -16,6 +13,7 @@ This project is a completed portfolio assignment from the official [Boot.dev Gui
 
 * **Curriculum Scope:** 24 Hours of interactive content spanning 13 core lessons.
 * **Core Concepts Covered:** High-fidelity TypeScript engineering, structural subtyping, generic cache layers, custom automated test design, stream-based interactive CLI infrastructure, and asynchronous query handling.
+
 ---
 
 ## 🛠️ Key Architectural Features
@@ -24,6 +22,7 @@ This project is a completed portfolio assignment from the official [Boot.dev Gui
 * **Automated Background Reaper Loop:** Features an active interval-based eviction routine (`setInterval`) that sweeps memory and eliminates stale records according to a configurable Time-To-Live (TTL) threshold.
 * **Standardized Pagination Keys:** Normalizes URL tracking tokens to handle seamless cache execution across multi-directional map navigation (`map` and `mapb`).
 * **Asynchronous REPL Infrastructure:** Uses Node.js `readline` interfaces combined with modern `async/await` control flow to process non-blocking system operations gracefully.
+
 ---
 
 ## 🕹️ Supported CLI Commands
@@ -37,6 +36,7 @@ This project is a completed portfolio assignment from the official [Boot.dev Gui
 | `catch <pokemon>` | Attempts to capture a specified Pokemon species using a dynamic probability scale based on its base experience metric, adding successes to your permanent collection ledger. |
 | `inspect <pokemon>` | Displays full statistical profiles and elemental typing configurations entirely from local memory for any previously captured Pokemon species. |
 | `exit` | Shuts down active execution loops, destroys open terminal streams, and cleanly terminates the process. |
+
 ---
 
 ## 🖥️ Example Session
