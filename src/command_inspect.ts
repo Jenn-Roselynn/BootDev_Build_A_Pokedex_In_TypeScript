@@ -19,11 +19,11 @@ export async function commandInspect(state: State, ...args: string[]): Promise<v
   const pokemonName = args[0].toLowerCase().trim();
 
   // Guard against inspecting uncaught entries by letting the error bubble up to the REPL loop
-  if (!(pokemonName in state.pokedex)) {
+  if (!(pokemonName in state.caughtPokemon)) {
     throw new Error("you have not caught that pokemon");
   }
 
-  const pokemonData = state.pokedex[pokemonName];
+  const pokemonData = state.caughtPokemon[pokemonName];
 
   console.log(`Name: ${pokemonData.name}`);
   console.log(`Height: ${pokemonData.height}`);
@@ -39,5 +39,3 @@ export async function commandInspect(state: State, ...args: string[]): Promise<v
     console.log(`  - ${typeEntry.type.name}`);
   }
 }
-
-export default commandInspect;
