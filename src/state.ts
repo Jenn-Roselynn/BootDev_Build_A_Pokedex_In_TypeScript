@@ -1,3 +1,6 @@
+// state.ts
+// Defines the central application state container for the Pokedex REPL, including terminal interface, command registry, API client, and pagination metadata.
+
 import { createInterface, type Interface } from "readline";
 import { getCommands } from "./command_registry.js";
 import { PokeAPI } from "./pokeapi.js";

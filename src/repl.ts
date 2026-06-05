@@ -1,3 +1,6 @@
+// repl.ts
+// Implements the Read-Eval-Print Loop (REPL) for the Pokedex application, handling user input, command execution, and output display in an interactive terminal environment.
+
 import type { State } from "./state.js";
 
 /**

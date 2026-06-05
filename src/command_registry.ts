@@ -1,3 +1,6 @@
+// command_registry.ts
+// Constructs and returns the central object mapping string keys to their respective executable CLI command configurations.
+
 import type { CLICommand } from "./state.js";
 import { commandExit } from "./command_exit.js";
 import { commandHelp } from "./command_help.js";
