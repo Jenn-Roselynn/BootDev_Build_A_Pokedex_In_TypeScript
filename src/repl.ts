@@ -1,4 +1,5 @@
 import readline from "readline";
+import { getCommands } from "./command_registry.js";
 
 /**
  * Splits a string into lowercase words, trimming any leading,
@@ -18,9 +19,11 @@ export function cleanInput(input: string): string[] {
 
 /**
  * Starts the interactive Read-Eval-Print Loop (REPL) for the Pokedex.
- * Sets up a listener on standard input and outputs prompt responses.
+ * Sets up a listener on standard input and handles registered registry commands.
  */
 export function startREPL(): void {
+  const commands = getCommands();
+  
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -39,10 +42,24 @@ export function startREPL(): void {
       return;
     }
 
-    const firstWord = words[0];
-    console.log(`Your command was: ${firstWord}`);
+    const commandName = words[0];
+
+    // Look up the command in our registry
+    if (commandName in commands) {
+      try {
+        commands[commandName].callback(commands);
+      } catch (error) {
+        console.error(`An error occurred while executing ${commandName}:`, error);
+      }
+    } else {
+      console.log("Unknown command.");
+    }
 
     // Give the prompt control back to the user for the next command
     rl.prompt();
+
+  
   });
 }
+
+startREPL();  // Start the REPL when this module is executed directly
