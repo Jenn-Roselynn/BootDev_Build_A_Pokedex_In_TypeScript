@@ -1,11 +1,8 @@
-### `README.md`
-
-```markdown
 # Build a Pokedex in TypeScript 🎮✨
 
 An interactive, command-line Pokedex application built from scratch using TypeScript and Node.js. This project implements a fully functional Read-Eval-Print Loop (REPL), parses structured JSON payloads from the remote PokeAPI service, and features an optimized, generic in-memory cache system with automatic background eviction.
 
-This project is a completed portfolio assignment from the official [Boot.Dev "Build a Pokedex in TypeScript" Guided Project](https://www.boot.dev/courses/build-pokedex-cli-typescript).
+This project is a completed portfolio assignment from the official [Boot.dev "Build a Pokedex in TypeScript" Guided Project](https://www.boot.dev/courses/build-pokedex-cli-typescript).
 
 * **Course Authors:** Boot.Dev Team 🧙🐻👩‍💻
 * **Implemented By:** Jenn Roselynn 🦇✨🌙
@@ -47,7 +44,6 @@ When running the interactive Pokedex terminal shell, the following commands are 
 Install project developer dependencies, testing tools, and system type definitions:
 ```bash
 npm install
-
 ```
 
 ### 2. Build and Run the Application
@@ -56,7 +52,6 @@ Compile the TypeScript source files into native ECMAScript Modules (`dist/`) and
 
 ```bash
 npm run dev
-
 ```
 
 ### 3. Run the Automated Test Suite
@@ -65,5 +60,4 @@ Execute the Vitest concurrent tracking assertions to validate the cache's automa
 
 ```bash
 npm run test
-
 ```
