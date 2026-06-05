@@ -1,3 +1,6 @@
+// repl.test.ts
+// Unit tests for the REPL input cleaning function, ensuring robust handling of various user input formats.
+
 import { describe, expect, test } from "vitest";
 import { cleanInput } from "./repl.js";
 

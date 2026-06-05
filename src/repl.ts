@@ -25,8 +25,8 @@ export function startREPL(state: State): void {
   // Display the initial prompt to the user using the state's readline interface
   state.rl.prompt();
 
-  // Listen for line inputs from the terminal
-  state.rl.on("line", (line: string) => {
+  // Listen for line inputs from the terminal, using an async wrapper to handle network calls
+  state.rl.on("line", async (line: string) => {
     const words = cleanInput(line);
 
     if (words.length === 0) {
@@ -39,7 +39,8 @@ export function startREPL(state: State): void {
     // Look up the command in our state's command registry
     if (commandName in state.commands) {
       try {
-        state.commands[commandName].callback(state);
+        // We MUST await our async callbacks so network calls finish before the next prompt displays
+        await state.commands[commandName].callback(state);
       } catch (error) {
         console.error(`An error occurred while executing ${commandName}:`, error);
       }
